@@ -1,0 +1,5 @@
+mechanics:
+  factions: true
+  skyblock: true
+spawn-limit: 0
+do-spawn-eggs-stack: false

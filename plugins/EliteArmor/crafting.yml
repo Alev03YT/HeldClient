@@ -1,0 +1,10 @@
+Recipes:
+  phantom_chestplate:
+    ingredients:
+      - 'D:MATERIAL:DIAMOND'
+      - 'R:MATERIAL:REDSTONE'
+    recipe:
+      - 'D D'
+      - 'RDR'
+      - 'DRD'
+    result: "phantom:C"

@@ -1,0 +1,28 @@
+COMMAND:
+  MESSAGE: |
+    &e&l----- &6&lElite&e&lMasks &6&lCommands &e&l-----
+
+    &e/elitemasks give &6<player> <mask> &e[amount]
+    &e/elitemasks reload
+    &e/elitemasks effects
+    &e/elitemasks admin
+
+    &6<> &7- &fRequire Argument
+    &e[] &7- &fOptional Argument
+
+    &6&lAliases: &e<elitemask, elitemasks, emask, emasks, em>
+CONFIGURATION:
+  RELOAD: '&6&l(!) &eConfiguration Files have been reloaded!'
+INVALID:
+  MASK: '&4&l(!) &cThat is an invalid mask type!'
+MASK:
+  APPLIED: '&6&l(!) &eThe mask &6''%mask%'' &ehas been applied!'
+  PLACED: '&4&l(!) &cYou cannot place masks onto the ground!'
+GIVEN:
+  MASK: '&6&l(!) &eYou have given &6%player% &ex%amount% of &6%mask%&e mask!'
+TOO:
+  MANY:
+    HELMETS: '&6&l(!) &eYou cannot place a mask on a stack of helmets'
+HAS:
+  MASK:
+    ALREADY: '&6&L(!) &eThis item already contains a mask on it'

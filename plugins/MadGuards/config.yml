@@ -1,0 +1,198 @@
+# =========================================================
+# MadGuards — Cosmic-style prison guards
+# Notes:
+# - Distances are in blocks.
+# - Time is in seconds unless noted.
+# - Color codes (§) are supported in messages.
+# - Material names must be valid Spigot/Paper Material keys.
+# =========================================================
+
+# === GUARD SETTINGS ===
+guard:
+  # Per-tier stats (used when you spawn a guard of that type).
+  # Type IDs: 1 = WARDEN, 2 = ENFORCER, 3 = GUARD
+  warden:
+    health: 1000             # Max HP for Wardens (toughest tier)
+    damage: 40.0             # Melee damage per hit
+    attack-rate: 10          # Sentinel attack speed (lower = faster)
+
+  enforcer:
+    health: 250
+    damage: 10.0
+    attack-rate: 5
+
+  guard:
+    health: 100
+    damage: 7.5
+    attack-rate: 5
+
+  # Global AI behavior (applies to all guards)
+  chase-range: 999999            # How far guards will chase a target
+  close-chase: true          # Keep very close while chasing
+  fightback: true            # Guards retaliate when hit
+  needs-ammo: false          # Only for ranged NPCs (unused here). Keep false.
+  realistic-sight: false     # If true, needs line-of-sight to “see” targets
+  invulnerable: false        # If true, guards can’t be damaged
+  reset-health-on-death: true # Heal guards back after kills/resets
+  intimidation-cooldown-ms: 15000
+  single-guard-pursuit: true
+
+  # Ranges
+  intimidation-radius: 5.0   # When a targeted player is this close: play effects once
+  reaction-radius: 20.0      # A guard reacts ONLY if its *spawn* is within this
+                             # radius of a crime/contraband holder
+
+  # === GUARD EFFECTS ON TARGET PLAYER ===
+  effects:
+    lightning: true          # Lightning *effect* (no damage) on first close contact
+    sound-growl: true        # Ender dragon growl
+    sound-thunder: true      # Thunder boom
+    flames: true             # Flame particles around the target
+    title: true              # Big red “You’re being hunted” title
+
+# === VILLAIN SETTINGS ===
+  villain:
+    duration-seconds: 900
+    block-commands:
+      - spawn
+      - home
+      - warp
+      - tpa
+      - cell
+    flag-on-any-attack: true   # <— NEW: attacker becomes VILLAIN even if no guard is nearby
+
+  regen:
+    enabled: true
+    out-of-combat-delay-seconds: 7   # wait this long after last hit
+    heal-amount: 1.0                 # how much to heal each tick (1.0 = half heart)
+    period-ticks: 40                 # how often to heal (40 = 2s)
+
+
+# === EQUIPMENT LOADOUT ===
+# Visual gear applied to guards (purely cosmetic for the NPC).
+# Use valid Material names: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
+# === EQUIPMENT LOADOUT ===
+# Visual gear only (Sentinel damage is configured separately)
+equipment:
+  # Fallbacks used if a per-type value isn't set
+  default:
+    helmet: "IRON_HELMET"
+    chestplate: "IRON_CHESTPLATE"
+    leggings: "IRON_LEGGINGS"
+    boots: "IRON_BOOTS"
+    weapon: "IRON_SWORD"
+    offhand: "AIR"
+
+  # Per-type overrides (optional)
+  warden:
+    helmet: "NETHERITE_HELMET"
+    chestplate: "NETHERITE_CHESTPLATE"
+    leggings: "NETHERITE_LEGGINGS"
+    boots: "NETHERITE_BOOTS"
+    weapon: "NETHERITE_SWORD"
+    offhand: "SHIELD"
+
+  enforcer:
+    helmet: "DIAMOND_HELMET"
+    chestplate: "DIAMOND_CHESTPLATE"
+    leggings: "DIAMOND_LEGGINGS"
+    boots: "DIAMOND_BOOTS"
+    weapon: "DIAMOND_SWORD"
+
+  guard:
+    helmet: "CHAINMAIL_HELMET"
+    chestplate: "CHAINMAIL_CHESTPLATE"
+    leggings: "CHAINMAIL_LEGGINGS"
+    boots: "CHAINMAIL_BOOTS"
+    weapon: "IRON_SWORD"
+
+# === NAMEPLATE DISPLAY ===
+# Name shown above each guard, with a live health bar.
+nameplate:
+  warden-name: "§4§lWarden"
+  enforcer-name: "§c§lEnforcer"
+  guard-name: "§6§lGuard"
+  heart-symbol: "§4♥"
+  format: "%name% %heart% %health%/%max%"   # Tokens: %name% %heart% %health% %max%
+
+# === IN-GAME MESSAGES ===
+# You can use color codes (§) and Unicode.
+messages:
+  guard-targeting: "§cThe guard is targeting you!"              # You hit a guard / you’re now a target
+  guard-noticed-crime: "§cA guard has noticed your crime!"       # You attacked a player in guard range
+  guard-retaliate: "§cA guard is retaliating!"                   # /simulateattack feedback (attacker)
+  guard-defend: "§aA guard is defending you!"                    # /simulateattack feedback (victim)
+  guard-fightback-disabled: "§7You hit a guard. §eFightback is disabled§7, they won't retaliate." 
+  hunted-title: "§4⚡ YOU’RE BEING HUNTED ⚡"                    # Big title when intimidation triggers
+  hunted-subtitle: "§cA Mad Guard is near!"                     # Subtitle under the title
+
+# === COMMAND SETTINGS ===
+commands:
+  simulate-attack-enabled: true   # Toggle for /simulateattack (testing tool)
+
+# === PLACEHOLDERAPI + BBB WATERMARK SETTINGS ===
+# Placeholders:
+#   %madguards_near_guard% -> near-guard-message / no-guard-message
+#   %madguards_villain%    -> "§c§lVILLAIN" or empty
+# Also toggles logging of BBB watermark placeholders (480131 etc) on enable.
+placeholders:
+  enabled: true
+  near-guard-message: "§cNEAR GUARD"
+  no-guard-message: "§aNO GUARDS NEARBY"
+
+# === CONTRABAND (Cosmic-style) ===
+# If a player holds/wears contraband within reaction-radius of any guard:
+#   1) Start a countdown (warn-seconds),
+#   2) If they still have it when time is up -> do "action":
+#        - confiscate: remove illegal items/armor
+#        - aggro: mark as VILLAIN and make guards target them
+contraband:
+  enabled: true
+  warn-seconds: 3
+  action: confiscate           # Options: confiscate | aggro
+
+  # Hand/Offhand items considered illegal near guards.
+  items:
+    - ENDER_PEARL
+    - BOW
+    - TIPPED_ARROW
+    - TNT
+    - LAVA_BUCKET
+
+  # Armor pieces not allowed to be worn near guards.
+  armor:
+    blocked:
+      - NETHERITE_HELMET
+      - NETHERITE_CHESTPLATE
+      - NETHERITE_LEGGINGS
+      - NETHERITE_BOOTS
+
+# === DEATH HANDLING (GUARD KILLS ONLY) ===
+# What happens to the *victim’s* items when the killer is a guard NPC:
+#   burn -> delete inventory with a short flame/smoke effect (Cosmic-style)
+#   drop -> force vanilla style drops on the ground (ignores keepInventory gamerule)
+#   keep -> keep entire inventory (no drops)
+death:
+  on-guard-kill:
+    mode: drop                 # Options: burn | drop | keep
+    burn-visuals: true         # Only used by mode: burn (visuals on delete)
+    keep-experience: true      # Keep XP level on death (drop 0 XP)
+
+# === GUARD SKINS ===
+guard-skin:
+  enabled: true
+
+  warden:
+    name: "WardenSkin"
+    texture: "ewogICJ0aW1lc3RhbXAiIDogMTczODg5NDQzODkxMiwKICAicHJvZmlsZUlkIiA6ICI0YWY1YmQ3NTdmZDE0MWEwOTczYmUxNTFkZWRjNmM5ZiIsCiAgInByb2ZpbGVOYW1lIiA6ICJjcmFzaGludG95b3VybW9tIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzkyNGY1OTc5M2M4ZWM1N2QzYmE1YzNmZDE3YmEzODgzOGY5NzY3ZTY1MjdhNzU2ZDMxYTc1NDRhYzI4NmZkMTgiCiAgICB9CiAgfQp9"
+    signature: "SlW6psRjyc/4HcNhstxwOWmQNTxzF6/9S0zP4uyVt49mjIUg1uXijNAoRupqbRy3fvPlGaFPVJtF1+5Rvh8TSbJBKj8wAEAcAz9suhmkDR8s84BZ+fa7z38jIjncOEv82u/p2lbyafJkQz2KruCpwqcSh+Kk5sHpx5Jdh4qqNZcJ5eYN4jYrU02x1MVWwOQXBg6GItvZNn8PIO+Xt4FrdI7S1EHnZzPXKJLvukVbvrCwz7UnR+yd17Lhxt/xBJWufmuR27ejrvYbHuARqFIE/Au84IGlDoL1fyfjBGlApP6bvYMYgoNB1/sf0+76piSkmNhvtyMg8eygcfy1YUiPe4wJeZkG+tR+yejcox0sEyGRIIL6bDOs+tTMSCewfSEZ6u7p/rxw2O3XNn7MQYtKP+rPfbX0b2CxrzSsoLqsU94tug1QTCmWU0AjJ996XlsbiqVwOf9mXJgQKatDHFsowZlijq/GDZylzgZX5pIqRZ5de23bev8yk3QOyOmxF/M5L4x0ih6DapK1/n+7tjd4q5J1LicBnKndA30Dx45JXZqq051Cvx39UpwfUF5tzJ3VzVLL2cPqeiVmcX7OZ4Jy8Tccmc0C5aiBrRLoF56UmnXoevMLhdflwr5K5JsLXfzedgwu36q21b+W1+lyyoUKrJQ6ne7zDzFZQHXoGj2ZBo0="
+
+  enforcer:
+    name: "EnforcerSkin"
+    texture: "ewogICJ0aW1lc3RhbXAiIDogMTc1MDUyNDI4ODY5MSwKICAicHJvZmlsZUlkIiA6ICI5MjI1NDBlMTRjZjI0NDI3YmExYmZjOTk3NWVmNGQ0YiIsCiAgInByb2ZpbGVOYW1lIiA6ICJfRmxhbnR5XyIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS81YWM2YWJlNDg3MTBiNjUxZTFhY2NkZDdiN2M1NDkwMmQxZGMzZDRkMTI5NTQ5MDBhZmY1OTU4YzE5YmE4NGJjIiwKICAgICAgIm1ldGFkYXRhIiA6IHsKICAgICAgICAibW9kZWwiIDogInNsaW0iCiAgICAgIH0KICAgIH0KICB9Cn0="
+    signature: "AmF8887kCCCYt8kZT8JYxSh/sbIJFXWy7sKqspAKeQlDp81RxoQJtOuG21J4xdHv1xi0xJCEW8bzBdnbuVCc0TbiIctumNAKANAdpRPWaq9/Gh5RCLlJhFdhLHU9PR6KPrOmTxC/4orh54BIvqcN2DB9lYY3kXQk00h90aSIfIcgL9FcebwWRFctbnoxbNzE58A1r+3njmMIniaE5ZRwJy/PP5QhT7HP4V1yeXWX76BCOsdBSCrr6WqMV3X4Ct3gL/E5Go6YwTTPW0dGKaA2F4t37k2rFdyw2YtgL1AmUMfzuXZFK8w3uXhZ+pS85Ks6THi8/Lltg2yOo1a7BFU9KZg1dErZkCalGCYbv7PjWzfAbvYISSMrgCvnhzdUCtr7kcUrEVYEv5kfIT1y86008udGNVHqXzNCUJZW2PiD7xTaHO+H9b6Dd1WHWRD9MQhkOfJVJrka8qBSCJJEvd28GBV6ljmlvg5Y4xAddNpBZjp0RzH48UfA6j+aK4X6QrjugLHequDMxIU+6w4+dA94zj6cXXSJjUc2Sr0+MfIqBV22/yRcVF7oJpgAA3GQZH5vbq2koSv6CKM75T1lOOP7Rhm1mCrL6/dsrR6S5zEuzEkyeKeoxSQllYnWbbfRrc77vIIgrVIuo3NYHVPmyQAnF99sxsKHC8TD4RFyuwEp2y8="
+
+  guard:
+    name: "GuardSkin"
+    texture: "ewogICJ0aW1lc3RhbXAiIDogMTc1MDUyNDM4NDI5MCwKICAicHJvZmlsZUlkIiA6ICI2YWVmMjM3Y2RhNDY0Y2QzYTdiZDcxYjg3YzFlMDEwNSIsCiAgInByb2ZpbGVOYW1lIiA6ICJLYWlqdW5va2kiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTlkNDY5YTVhNWU0NTg5YzUwMWE4ZjQ1ZmUyYTRiMGFlZDQ2MWFjOTQ0YzQ0MmMyMTg1ZDEwYzMxZjRjYmY4YyIKICAgIH0KICB9Cn0="
+    signature: "jH5epEorIhDahIWLUqi8MIUQy87iANnJx5NqcY0tDn2cucxDmsN39eX4qCWNhsB5j1DIRzotuqPt7RZpdbGyanMAEyeZVD+N09Rpl+tUwZtdgkui2AtnuNSCLKt/y9HF7m9nPhGAAKrRS9yWpXi4r7AqFhvi559gu5xwFoVT1Q6dnykg0XmKFIL/MFuz28oQMFWe4Ke6BbkIyhfO92YfVc4ycRHbYcMRk0lk8eekgmazHUEIx6xmo4T90uafNMJgB6k3uW3OE4C9HXUydKKGMtHmz/fhGrcrF1LRvqq+o/fyJ8y79IIuLLC2ICQcvAVV9n3rIwLFU5u2P2UGt/hyBrmxDTn9GlGS4kzVnGcZidlC6dWWIlyoOpmgglDoUdw6TPGvVKqueRYGid6PZDftetgCM7SNde4o1ACFsDu73bGU1HLSUC0NLd1DmRY67eddvewwm26InvGrqhzgb6eNFxgVKxi0YAon95oN8ZwbVvkxovtW4e2R9HcAv+MtcfIhpVxhnw8KnQtaQWHGfYzTpJHEeto9o7ey/gAl+sLVLxpxxzJ/PkmVI9XN12Sf3tik/3spvS/Y4yL2oMd4xWJKFIw0X2GDToG56FtCg2lGbADQxZnRzmx7EXwMLSMuYMaJ0z76XBHJ6CGgeC8MBpnH0bkTXX5p/djX34jisD2PGa0="

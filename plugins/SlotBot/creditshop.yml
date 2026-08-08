@@ -1,0 +1,37 @@
+enabled: true
+# Value is in hours
+refreshEvery: 6
+# How many credits should we give per ticket used
+creditsPerTicketUsed: 1
+# The broadcast message sent to everyone when the shop refreshes.
+# Set to [] for nothing
+refreshBroadcast:
+  - ""
+  - "&b&l** CREDIT SHOP REFRESH **"
+  - "&fThe /bot credit shop has been updated!"
+  - ""
+creditReceiveMessage:
+  - "&a&l[!] &aYou have been rewarded with <creditAmount> credit(s)"
+  - "&7You can spend your credits in the Slot Bot Credit Shop (/bot)"
+notEnoughCreditsMessage:
+  - "&c&l[!] &cYou do not have enough credits to purchase this item."
+itemPurchase:
+  - "&c&l- <creditAmount> Credits"
+menuFillGlassData: 15
+creditCostDisplayLine: "&e&lCREDITS: &f&l<credits>"
+purchasesDisplay:
+  - ""
+  - "&6This item has been purchased"
+  - "&6a total of &e&n<purchases> times&6 this restock."
+rewards:
+  1:
+    material: "CAKE"
+    data: 0
+    name: "&cCake, lots of it"
+    lore:
+    - "&7The lore for lots of cake"
+    commands:
+    - "give <player> cake 100"
+    chance: 2
+    creditsCost: 100
+    item: "NONE"

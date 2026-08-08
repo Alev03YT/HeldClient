@@ -1,0 +1,169 @@
+display: "&5&lBrood Mother &7| &c{HEALTH}♥" # Name of the boss (ontop of the entity) - Updates with the {HEALTH} placeholder
+entity: "SPIDER" # Entity of boss
+health: 1500 # Max Health of boss
+
+scoreboard:
+  enabled: true
+  ticks: 20 # How long before the scoreboard refreshes (20 = 1s)
+  visible-range: 50 # How far from the boss to see the scoreboard in blocks
+  # Variables for scoreboard
+  # {HEALTH} - Show Bosses Health
+  # {MAX-HEALTH} - Show Bosses Max Health
+  # {PHASE} - Show Current Bosses Phase
+  # {DAMAGE-DEALT} - How much damage the viewer has done
+  # {DAMAGE-DEALT-PERCENT} - How much damage the viewer has done in a %
+  # {MINION-COUNT} - Show how many minions are active
+  title: "&5&lBrood Mother" # Title of scoreboard
+  # Limit of scoreboard lines is 15 so be cautious
+  lines:
+    - ''
+    - '&c&lHealth'
+    - '&c{HEALTH}♥'
+    - ''
+    - '&e&lMinions'
+    - '&e{MINION-COUNT}'
+    - ''
+    - '&a&lDamage Dealt'
+    - '&a{DAMAGE-DEALT} &7[{DAMAGE-DEALT-PERCENT}%]'
+    - ''
+
+# Remove either SPAWN or DEATH if you do not want it to broadcast
+broadcasts:
+  # Broadcast on spawn
+  SPAWN:
+    - ''
+    - '&d&l(!) &dThe &5&lBrood Mother&d has been spawned'
+    - '&dat &5{X}x&d, &5{Y}y&d, &5{Z}z &din the &cWarzone&d!'
+    - ''
+  # Broadcast on death
+  DEATH:
+    - ''
+    - '&d&l(!) &dThe &5&lBrood Mother&d has been defeated'
+    - '&dby these great warriors!'
+    - '&5&l(!) Most Damage'
+    - '&51. &d{PLAYER-1} &7({PLAYER-DAMAGE-1} DMG)'
+    - '&52. &d{PLAYER-2} &7({PLAYER-DAMAGE-2} DMG)'
+    - '&53. &d{PLAYER-3} &7({PLAYER-DAMAGE-3} DMG)'
+    - ''
+
+# Rewards given to top damagers
+# Placeholder: {PLAYER}
+# You can add chances to each command by adding <chance>;;<command>
+# Example: 20;;give {PLAYER} emerald 1
+rewards:
+  1:
+    - 'give {PLAYER} emerald 1'
+  2:
+    - 'give {PLAYER} diamond 1'
+  3:
+    - 'give {PLAYER} iron_ingot 1'
+
+# Bosses are able to have multiple phases
+phases:
+  1:
+    # Each phase can be activated on a min health value (if they regen health they can go back to a lower phase)
+    # You should make the min health less than the max health and do not duplicate it in other phases
+    min-health: 500
+    max-health: 1500
+    # This will set the player that the boss will target
+    # Available target types: RANDOM, CLOSEST, LOWEST_HEALTH, HIGHEST_HEALTH
+    target-type: "RANDOM"
+    effects:
+      overall-chance: 30 # Overall chance of the effects activating
+      values:
+        # There are currently two types of effects DEFENSE & ATTACK & PHASE
+        # DEFENSE = When the boss is attacked by a player
+        # ATTACK = When the boss attacks a player
+        # PHASE = When the boss changes phase
+        #
+        # Effects are done with percentages so 'PERCENT;EFFECT', if you do not
+        # include a percent it is automatically made to execute ONCE (one time) 100%
+        #
+        # You can add multiple effects on one line by separating them via ### (do not include the chance [20;])
+        # You can also add messages to any effect to send to a radius adding :<message=radius>your message</message> to the end of your effect
+        # ie. <message=5>This is a message</message> will send that message to players in a radius of 5 blocks
+        DEFENSE:
+          - '20;MINIONS:CAVE_SPIDER:10:IRON:5:&5&lBrood Spawn:3:5:SPEED-5,INCREASE_DAMAGE-1:<message=20>&5&lBrood Mother >> &fGo my children, devour their very souls!</message>'
+          - '8;WEB:3:3:3:5:<message=20>&5&lBrood Mother >> &fFeel the despair wash over you, for you have fallen into my trap</message>'
+          - '20;POTION:BLINDNESS:1:PLAYER:5:20'
+        PHASE:
+          - 'POTION:INCREASE_DAMAGE:3:BOSS'
+  2:
+    min-health: 0
+    max-health: 499
+    target-type: "RANDOM"
+    effects:
+      overall-chance: 30
+      values:
+        DEFENSE:
+          - '20;MINIONS:CAVE_SPIDER:15:IRON:5:&5&lBrood Spawn:3:10:SPEED-5,INCREASE_DAMAGE-1:<message=20>&5&lBrood Mother >> &fGo my children, devour their very souls!</message>'
+          - '8;WEB:5:5:5:5:<message=20>&5&lBrood Mother >> &fFeel the despair wash over you, for you have fallen into my trap</message>'
+          - '20;POTION:BLINDNESS:1:PLAYER:5:20'
+        PHASE:
+          - 'POTION:INCREASE_DAMAGE:3:BOSS'
+
+# Set the equipment the boss uses
+# The following values are used
+# weapon, helmet, chestplate, leggings and boots
+#
+# To use coloured leather just set LEATHER_<TYPE>:R,G,B
+# example: LEATHER_CHESTPLATE:255,0,0
+#
+# Note: Some mobs do not show the armor but will have it on ie. Spiders etc.
+equipment:
+  weapon:
+    material: "DIAMOND_SWORD" # Material of item
+    enchants: # Vanilla enchantments - 'ENCHANT:LEVEL'
+      - 'DAMAGE_ALL:5'
+  helmet:
+    material: "IRON_HELMET"
+    enchants:
+      - 'PROTECTION_ENVIRONMENTAL:2'
+  chestplate:
+    material: "IRON_CHESTPLATE"
+    enchants:
+      - 'PROTECTION_ENVIRONMENTAL:2'
+  leggings:
+    material: "IRON_LEGGINGS"
+    enchants:
+      - 'PROTECTION_ENVIRONMENTAL:2'
+  boots:
+    material: "IRON_BOOTS"
+    enchants:
+      - 'PROTECTION_ENVIRONMENTAL:2'
+
+# Item is the spawn item that can be used to spawn the boss
+# If you do not want this then just don't give it to players since that
+# is the only way they can obtain it
+item:
+  material: "SPIDER_SPAWN_EGG"
+  name: "&5&lBrood Mother"
+  lore:
+    - '&7This monster egg contains a'
+    - '&c&ndangerous&7 warzone boss'
+    - ''
+    - '&5&lLORE'
+    - '&7&oThe mother of all spiders, with the'
+    - '&7&omost deadly venom in all the'
+    - '&7&oCosmoverse. No one has survived a'
+    - '&7&obite from the Brood Mother.'
+    - ''
+    - '&5&lDIFFICULTY'
+    - '&5Ultimate'
+
+settings:
+  # Worlds where the boss cannot spawn (via item)
+  blocked-worlds:
+    - 'test'
+  # Regions where the boss cannot spawn (via item)
+  blocked-regions:
+    - 'example-region'
+  boss-distance:
+    distance: 50 # Distance the boss can move from their spawn before they are teleport back
+    send-message: true # Send a message to players in the radius to tell them the boss has been teleported back
+  player-spawn: true # Can players spawn the boss via item? Ops bypass this even if it is disabled
+  warzone-only: false # Bosses can only be spawned in the warzone, if they are spawned and walk out of the warzone they
+  # are teleported back.
+  # Requires Factions
+
+# Congrats you have made it to the end of the config, enjoy your creation. I hope to see some great bosses made by this plugin!

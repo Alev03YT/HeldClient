@@ -1,0 +1,131 @@
+# Should the plugin randomize the loot each week. false = all loot is used for rewards
+randomizeLootWeekly: true
+# The day in which loot will be randomized. It will only happen ONCE that day
+lootRandomizeDay: FRIDAY
+# The amount of rewards that will be picked
+lootRandomizeAmount: 3
+messages:
+  broadcast: true
+  rewardsWonBroadcast:
+  - '&6&l[!] &7<player> has won these rewards from the Slot Bot:'
+  - <rewardsWonList>
+  highRollerRewardsWonBroadcast:
+  - '&6&l[!] &7<player> has won these rewards from the &nHIGH ROLLER&7 Slot Bot:'
+  - <rewardsWonList>
+menu:
+  title: Slot Bot
+  previewTitle: Slot Bot | Rewards Preview
+  creditShopTitle: Slot Bot | Credit Shop
+  showChanceInPreview: true
+  executeRewardsOnClose: true
+  chanceLine: '&6&lCHANCE: &f&l<chance>'
+  sounds:
+    menuOpen: ENTITY_BAT_TAKEOFF
+    enterTicket: BLOCK_WOODEN_BUTTON_CLICK_ON
+    removeTicket: BLOCK_WOODEN_BUTTON_CLICK_OFF
+    creditShopItemPurchase: ENTITY_ENDERMAN_TELEPORT
+    slotSound: UI_BUTTON_CLICK
+  items:
+    rewardsView:
+      material: BEACON
+      data: 0
+      name: '&f&lLoot Table'
+      lore:
+      - '&7The Slot Bot contains &6RARE'
+      - '&7items that randomize every week'
+      - ''
+      - <rewardsList>
+    creditShop:
+      material: WATCH
+      data: 0
+      name: '&e&lCredit Shop (&f<credits> Credits&e&l)'
+      lore:
+      - '&7Spend your credits on extremely rare'
+      - '&7items that change every <creditRotateHours> hours.'
+    spinButton:
+      material: PAPER
+      data: 0
+      name: '&a&lSpin'
+      lore:
+      - '&7Click to spin the bot.'
+    spinButtonNoTickets:
+      material: MAGMA_CREAM
+      data: 0
+      name: '&c&lSpin (&7Missing Tickets&c&l)'
+      lore:
+      - '&7Insert a Slot Bot Ticket'
+      - '&7to spin the bot.'
+      - ''
+      - '&7Purchase Slot Bot Tickets'
+      - '&7from &fstore.myserver.com'
+    lockedSlot:
+      material: RED_STAINED_GLASS_PANE
+      data: 14
+      name: '&c&lLOCKED'
+      lore:
+      - '&7Click a ticket in your inventory'
+      - '&7to load the slot bot.'
+    help:
+      material: BOOK
+      data: 0
+      name: '&b&lHow to Play'
+      lore:
+      - '&d&l1. &7Insert up to 5 Slot Bot Tickets'
+      - '&7into the bot from your inventory'
+      - ''
+      - '&d&l2. &7Click "Spin" to roll the bot'
+      - '&7or, click each ticket to return them'
+      - '&7to your inventory.'
+      - ''
+      - '&d&l3. &7When the bot finishes rolling,'
+      - '&7the item it lands on will be your reward.'
+      - ''
+      - '&f&lTIP: &7Closing the menu while it is'
+      - '&7spinning will give you a random reward.'
+    nextPage:
+      material: ARROW
+      data: 0
+      name: '&a&lNext Page'
+      lore:
+      - '&7Click for the next page'
+    previousPage:
+      material: ARROW
+      data: 0
+      name: '&a&lPrevious Page'
+      lore:
+      - '&7Click for the previous page'
+ticket:
+  material: PAPER
+  data: 0
+  name: '&d&lSlot Bot &f&lTicket &7(/bot)'
+  lore:
+  - '&7Right-Click the Slot Bot or'
+  - '&7use /bot and insert this ticket'
+  - '&7into the bot and click Spin.'
+ticketScrap:
+  material: GOLD_NUGGET
+  data: 0
+  name: '&d&lSlot Bot &f&lTicket Scrap'
+  lore:
+  - '&7Combine with 9 Slot Bot Ticket Scraps'
+  - '&7to create a &d&lSlot Bot &f&lTicket'
+  - ''
+  - '&7To combine, right-click a stack of 9+ scraps in your hand!'
+highRollerTicket:
+  material: PAPER
+  data: 0
+  name: '&d&l[HIGH ROLLER] Slot Bot &f&lTicket &7(/bot)'
+  lore:
+  - '&7Right-Click the Slot Bot or'
+  - '&7use /bot and insert this ticket'
+  - '&7into the bot and click Spin.'
+highRollerTicketScrap:
+  material: GOLD_NUGGET
+  data: 0
+  name: '&d&l[HIGH ROLLER] Slot Bot &f&lTicket Scrap'
+  lore:
+  - '&7Combine with 9 Slot Bot Ticket Scraps'
+  - '&7to create a &d&l[HIGH ROLLER] Slot Bot &f&lTicket'
+  - ''
+  - '&7To combine, right-click a stack of 9+ scraps in your hand!'
+hasRandomized: false

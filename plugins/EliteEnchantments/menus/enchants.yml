@@ -1,0 +1,171 @@
+main-menu:
+  title: "View Groups"
+  rows: 4
+  buttons:
+    0:
+      material: "GRAY_STAINED_GLASS_PANE"
+      name: "&f"
+      lore: []
+    1:
+      material: "GRAY_STAINED_GLASS_PANE"
+      name: "&f"
+      lore: []
+    2:
+      material: "GRAY_STAINED_GLASS_PANE"
+      name: "&f"
+      lore: []
+    3:
+      material: "GRAY_STAINED_GLASS_PANE"
+      name: "&f"
+      lore: []
+    4:
+      material: "GRAY_STAINED_GLASS_PANE"
+      name: "&f"
+      lore: []
+    5:
+      material: "GRAY_STAINED_GLASS_PANE"
+      name: "&f"
+      lore: []
+    6:
+      material: "GRAY_STAINED_GLASS_PANE"
+      name: "&f"
+      lore: []
+    7:
+      material: "GRAY_STAINED_GLASS_PANE"
+      name: "&f"
+      lore: []
+    8:
+      material: "GRAY_STAINED_GLASS_PANE"
+      name: "&f"
+      lore: []
+    9:
+      material: "GRAY_STAINED_GLASS_PANE"
+      name: "&f"
+      lore: []
+    10:
+      material: "GRAY_STAINED_GLASS_PANE"
+      name: "&f"
+      lore: []
+    11:
+      material: "WHITE_STAINED_GLASS_PANE"
+      name: "&f&lSimple &7Enchantments"
+      lore:
+        - '&7Click to view all ''&fSimple'' &7enchantments'
+      group: "SIMPLE"
+    12:
+      material: "LIME_STAINED_GLASS_PANE"
+      name: "&a&lUnique &7Enchantments"
+      lore:
+        - '&7Click to view all ''&aUnique&7'' enchantments'
+      group: "UNIQUE"
+    13:
+      material: "LIGHT_BLUE_STAINED_GLASS_PANE"
+      name: "&b&lElite &7Enchantments"
+      lore:
+        - '&7Click to view all ''&bElite&7'' enchantments'
+      group: "ELITE"
+    14:
+      material: "YELLOW_STAINED_GLASS_PANE"
+      name: "&e&lUltimate &7Enchantments"
+      lore:
+        - '&7Click to view all ''&eUltimate&7'' enchantments'
+      group: "ULTIMATE"
+    15:
+      material: "ORANGE_STAINED_GLASS_PANE"
+      name: "&6&lLegendary &7Enchantments"
+      lore:
+        - '&7Click to view all ''&6Legendary&7'' enchantments'
+      group: "LEGENDARY"
+    16:
+      material: "GRAY_STAINED_GLASS_PANE"
+      name: "&f"
+      lore: []
+    17:
+      material: "GRAY_STAINED_GLASS_PANE"
+      name: "&f"
+      lore: []
+    18:
+      material: "GRAY_STAINED_GLASS_PANE"
+      name: "&f"
+      lore: []
+    19:
+      material: "GRAY_STAINED_GLASS_PANE"
+      name: "&f"
+      lore: []
+    20:
+      material: "GRAY_STAINED_GLASS_PANE"
+      name: "&f"
+      lore: []
+    21:
+      material: "RED_STAINED_GLASS_PANE"
+      name: "&c&lSoul &7Enchantments"
+      lore:
+        - '&7Click to view all ''&cSoul&7'' enchantments'
+      group: "SOUL"
+    22:
+      material: "PINK_STAINED_GLASS_PANE"
+      name: "&d&lHeroic &7Enchantments"
+      lore:
+        - '&7Click to view all ''&dHeroic&7'' enchantments'
+      group: "HEROIC"
+    23:
+      material: "RED_STAINED_GLASS_PANE"
+      name: "&4&lMastery &7Enchantments"
+      lore:
+        - '&7Click to view all ''&4Mastery&7'' enchantments'
+      group: "MASTERY"
+    24:
+      material: "GRAY_STAINED_GLASS_PANE"
+      name: "&f"
+      lore: []
+    25:
+      material: "GRAY_STAINED_GLASS_PANE"
+      name: "&f"
+      lore: []
+    26:
+      material: "GRAY_STAINED_GLASS_PANE"
+      name: "&f"
+      lore: []
+    27:
+      material: "GRAY_STAINED_GLASS_PANE"
+      name: "&f"
+      lore: []
+    28:
+      material: "GRAY_STAINED_GLASS_PANE"
+      name: "&f"
+      lore: []
+    29:
+      material: "GRAY_STAINED_GLASS_PANE"
+      name: "&f"
+      lore: []
+    30:
+      material: "GRAY_STAINED_GLASS_PANE"
+      name: "&f"
+      lore: []
+    31:
+      material: "GRAY_STAINED_GLASS_PANE"
+      name: "&f"
+      lore: []
+    32:
+      material: "GRAY_STAINED_GLASS_PANE"
+      name: "&f"
+      lore: []
+    33:
+      material: "GRAY_STAINED_GLASS_PANE"
+      name: "&f"
+      lore: []
+    34:
+      material: "GRAY_STAINED_GLASS_PANE"
+      name: "&f"
+      lore: []
+    35:
+      material: "GRAY_STAINED_GLASS_PANE"
+      name: "&f"
+      lore: []
+
+
+group-menu:
+  title: "&8View all {GROUP-COLOR}{GROUP-NAME} &8Enchantments"
+
+enchant-menu:
+  title: "&7Viewing {GROUP-COLOR}{ENCHANT}"

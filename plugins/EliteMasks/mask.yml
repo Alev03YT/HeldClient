@@ -1,0 +1,307 @@
+#############################################################
+# EliteMasks - Created By Splodgebox
+#
+# To view current effects execute /elitemasks effects
+# Effects are added constantly, so be on the lookout
+#
+#############################################################
+Masks:
+  headless:
+    name: "&6&lHeadless Mask"
+    lore:
+      - '&7A terrifying Mask from the'
+      - '&7grave of the Headless Horsemen'
+      - '&6* October 2018'
+      - ''
+      - '&7&oAttach this mask to any helmet'
+      - '&7&oto give it a Visual Override!'
+      - ''
+      - '&7To equip, place this mask on a helmet.'
+      - '&7To remove, right-click helmet while attached.'
+    skin: "59dee2e814cd4b5e933d8f2b30a0bc2a583552cbe3dae581bec09fbb6eb07e"
+    applied_lore: "&6&lHeadless Mask &6(October 2018)"
+    effects: []
+  purge:
+    name: "&c&lPurge Mask"
+    lore:
+      - '&c+2.5% DMG'
+      - '&7A great evil is contained in this'
+      - '&7horrifying Mask. Who knows what inner'
+      - '&7demons it will release'
+      - '&6* Halloween 2018'
+      - ''
+      - '&7&oAttach this mask to any helmet'
+      - '&7&oto give it a Visual Override!'
+      - ''
+      - '&7To equip, place this mask on a helmet.'
+      - '&7To remove, right-click helmet while attached.'
+    skin: "6e39fa3aeff671667571d6541f685ccd6c9c4185f5d3a5af5872ec9879a2044"
+    applied_lore: "&c&lPurge Mask &c(2.5% DMG)"
+    effects:
+      - 'Damage:2.5'
+  ghost:
+    name: "&3&lGhost Mask"
+    lore:
+      - '&7The deviant mask of the spectre,'
+      - '&7a metaphysical monstrosity.'
+      - '&6* Ghost Mastery Kit'
+      - ''
+      - '&7&oAttach this mask to any helmet'
+      - '&7&oto give it a Visual Override!'
+      - ''
+      - '&7To equip, place this mask on a helmet.'
+      - '&7To remove, right-click helmet while attached.'
+    skin: "96e93467a3a079227f4a7d3eba7617536da491bc2fc6d73ee3968d3cf1a6a5"
+    applied_lore: "&3&lGhost Mask &6(Ghost Mastery Kit)"
+    effects: []
+  scarecrow:
+    name: "&e&lScarecrow Mask"
+    lore:
+      - '&cInfinite Food'
+      - '&7A empty husk of a'
+      - '&7once tortured soul left to rot'
+      - '&6* November 2018 CC'
+      - ''
+      - '&7&oAttach this mask to any helmet'
+      - '&7&oto give it a Visual Override!'
+      - ''
+      - '&7To equip, place this mask on a helmet.'
+      - '&7To remove, right-click helmet while attached.'
+    skin: "5fe6502ac4c847b1ac37810d66d28c91a8b18fd7f6383128228755aa8c8f5"
+    applied_lore: "&e&lScarecrow &c(Infinite Hunger)"
+    effects:
+      - 'Hunger'
+  turkey:
+    name: "&e&lTurkey Mask"
+    lore:
+      - '&c+2% Dodge'
+      - '&7Stay nimble and fast, or the'
+      - '&7Pilgrims will catch and cook you!.'
+      - '&6* Thanksgiving 2018'
+      - ''
+      - '&7&oAttach this mask to any helmet'
+      - '&7&oto give it a Visual Override!'
+      - ''
+      - '&7To equip, place this mask on a helmet.'
+      - '&7To remove, right-click helmet while attached.'
+    skin: "80f69c1d611d64722866f5991de3bbd7c6f7f0585c5ecf88bdb5f6afb4c78d"
+    applied_lore: "&e&lTurkey Mask &c(+2% Dodge)"
+    effects:
+      - 'Dodge:2:&e&l*** &eDODGED &e&l***'
+  pilgrim:
+    name: "&e&lPilgrim Mask"
+    lore:
+      - '&c+25% EXP/Drops'
+      - '&7tHiS iS oUr LaNd NoW!'
+      - '&6* Thanksgiving 2018'
+      - ''
+      - '&7&oAttach this mask to any helmet'
+      - '&7&oto give it a Visual Override!'
+      - ''
+      - '&7To equip, place this mask on a helmet.'
+      - '&7To remove, right-click helmet while attached.'
+    skin: "18ad225756ad51b05f131eac94adaead40e8fee35423989749fc8f83673eb916"
+    applied_lore: "&e&lPilgrim Mask &c(+25% EXP/Drops)"
+    effects:
+      - 'EXP:2.5'
+      - 'Drops:2.5'
+  monopoly:
+    name: "&b&lMonopoly Mask"
+    lore:
+      - '&c-5% ENEMY DMG'
+      - '&7The mask of a man who has it all,'
+      - '&7a truly powerful entity to contest with.'
+      - '&6* Black Friday 2018'
+      - ''
+      - '&7&oAttach this mask to any helmet'
+      - '&7&oto give it a Visual Override!'
+      - ''
+      - '&7To equip, place this mask on a helmet.'
+      - '&7To remove, right-click helmet while attached.'
+    skin: "3179b084321cd656c619e8825fbdda92bfebf2e5ad9d2be52a90a53a69c629"
+    applied_lore: "&b&lMonopoly Mask &c(-5% ENEMY DMG)"
+    effects:
+      - 'Reduction:5'
+  necromancer:
+    name: "&2&lNecromancer Mask"
+    lore:
+      - '&7An enchanted skull conjured from,'
+      - '&7the depths of the underworld'
+      - '&6* Necromancer Mastery Kit'
+      - ''
+      - '&7&oAttach this mask to any helmet'
+      - '&7&oto give it a Visual Override!'
+      - ''
+      - '&7To equip, place this mask on a helmet.'
+      - '&7To remove, right-click helmet while attached.'
+    skin: "ceca5a3d90c25e22ca72d2cf330914594d78b87f27e2c1e4f1c388a59dc3ae7d"
+    applied_lore: "&2&lNecromancer Mask &6(Necromancer Mastery Kit)"
+    effects: []
+  dragon:
+    name: "&4&lDragon Mask"
+    lore:
+      - '&c+5% DMG'
+      - '&cImmune to fire and lava damage'
+      - '&7The decapitated skull of a slain'
+      - '&7Timeless Dragon from the Ender Dimension'
+      - '&6* Timeless Dragon Update'
+      - ''
+      - '&7&oAttach this mask to any helmet'
+      - '&7&oto give it a Visual Override!'
+      - ''
+      - '&7To equip, place this mask on a helmet.'
+      - '&7To remove, right-click helmet while attached.'
+    skin: "74ecc040785e54663e855ef0486da72154d69bb4b7424b7381ccf95b095a"
+    applied_lore: "&4&lDragon Mask &c(Immune to lava and fire damage)"
+    effects:
+      - 'Damage:5'
+      - 'Immunity'
+  santa:
+    name: "&b&lSanta Mask"
+    lore:
+      - '&c+2 Hearts'
+      - '&7An eerie mask imbued with'
+      - '&7Chirstmas joy that knows'
+      - '&7who is naughty or nice'
+      - '&6* Christmas 2018'
+      - ''
+      - '&7&oAttach this mask to any helmet'
+      - '&7&oto give it a Visual Override!'
+      - ''
+      - '&7To equip, place this mask on a helmet.'
+      - '&7To remove, right-click helmet while attached.'
+    skin: "14e424b1676feec3a3f8ebade9e7d6a6f71f7756a869f36f7df0fc182d436e"
+    applied_lore: "&b&lSanta Mask &c(+2 Hearts)"
+    effects:
+      - 'Health:2'
+  reindeer:
+    name: "&a&lReindeer Mask"
+    lore:
+      - '&cSpeed IV'
+      - '&cFlight regardless of rank'
+      - '&7The decapitated and stuffed'
+      - '&7head of one of Santa''s'
+      - '&7magical reindeer... yikes!'
+      - '&6* Christmas 2018'
+      - ''
+      - '&7&oAttach this mask to any helmet'
+      - '&7&oto give it a Visual Override!'
+      - ''
+      - '&7To equip, place this mask on a helmet.'
+      - '&7To remove, right-click helmet while attached.'
+    skin: "44927ce5ba22ad1e757d6a333e275b36da1a8436fcef077340ab53e3fb"
+    applied_lore: "&a&lReindeer Mask &c(Speed IV)"
+    effects:
+      - 'Potion:SPEED:4'
+      - 'Fly'
+  party:
+    name: "&f&lParty Mask"
+    lore:
+      - '&c-5% ENEMY DMG'
+      - '&c+5% DMG'
+      - '&7Everywhere you are is a party'
+      - '&6* New Years 2019'
+      - ''
+      - '&7&oAttach this mask to any helmet'
+      - '&7&oto give it a Visual Override!'
+      - ''
+      - '&7To equip, place this mask on a helmet.'
+      - '&7To remove, right-click helmet while attached.'
+    skin: "f9f87f030847ac8fdaafd01e839f3597bf10e8ea026f4710333c8ee8b19da0b1"
+    applied_lore: "&f&lParty Mask &c(+5% ENEMY DMG)"
+    effects:
+      - 'Damage:5'
+      - 'Reduction:5'
+  knight:
+    name: "&9&lDeath Knight Mask"
+    lore:
+      - '&c+2.5% DMG'
+      - '&7The cursed mask of runeforged'
+      - '&7Death Knight armor'
+      - '&6* Death Knight Mastery Kit'
+      - ''
+      - '&7&oAttach this mask to any helmet'
+      - '&7&oto give it a Visual Override!'
+      - ''
+      - '&7To equip, place this mask on a helmet.'
+      - '&7To remove, right-click helmet while attached.'
+    skin: "4b2a75f05437ba2e28fb2a7d0eb6697a6e091ce91072b5c4ff1945295b092"
+    applied_lore: "&9&lDeath Knight Mask &c(+2.5% DMG)"
+    effects:
+      - 'Damage:2.5'
+  rift:
+    name: "&5&lRift Mask"
+    lore:
+      - '&7A mysterious mask with a strange'
+      - '&7aura of power found scattered among'
+      - '&7a select few random lootboxes'
+      - '&6* Snow Day Lootbox Release'
+      - ''
+      - '&7&oAttach this mask to any helmet'
+      - '&7&oto give it a Visual Override!'
+      - ''
+      - '&7To equip, place this mask on a helmet.'
+      - '&7To remove, right-click helmet while attached.'
+    skin: "2dc71497ba1f6891c984dab6f2ddaa332d7261d8163156abf6dc0faa0db23bf"
+    applied_lore: "&5&lRift Mask &6(Snow Day Lootbox Release)"
+    effects: []
+  lover:
+    name: "&c&lLover Mask"
+    lore:
+      - '&7Make love, not Minecraft...'
+      - '&7or maybe its the other way around?'
+      - '&6* Valentine Day 2019'
+      - ''
+      - '&7&oAttach this mask to any helmet'
+      - '&7&oto give it a Visual Override!'
+      - ''
+      - '&7To equip, place this mask on a helmet.'
+      - '&7To remove, right-click helmet while attached.'
+    skin: "80cab9622228574ddfd5df37264e29754eaa4592055e3fbbb128954bfd1a39"
+    applied_lore: "&c&lLover Mask &6(Valentine Day 2019)"
+    effects: []
+  spectral:
+    name: "&3&lSpectral Mask"
+    lore:
+      - '&7As silent as the night, as mystic'
+      - '&7as the full moon; The Spectre'
+      - '&6* Baked Lootbox Release'
+      - ''
+      - '&7&oAttach this mask to any helmet'
+      - '&7&oto give it a Visual Override!'
+      - ''
+      - '&7To equip, place this mask on a helmet.'
+      - '&7To remove, right-click helmet while attached.'
+    skin: "dc8a64343e23fcc02130515a71d99783b6d6953615e8a6d5f0987908f613ebe"
+    applied_lore: "&3&lSpectral Mask &6(Baked Lootbox Release)"
+    effects: []
+  glitch:
+    name: "&f&lGlitch Mask"
+    lore:
+      - '&7The aura around this mask'
+      - '&7is electrified and encoded'
+      - '&6* St Patrick''s Day 2019'
+      - ''
+      - '&7&oAttach this mask to any helmet'
+      - '&7&oto give it a Visual Override!'
+      - ''
+      - '&7To equip, place this mask on a helmet.'
+      - '&7To remove, right-click helmet while attached.'
+    skin: "7503d2808b3169aab8c491ab83fb5de76daec20cd8864d9ddf629f584d8d63a7"
+    applied_lore: "&f&lGlitch Mask &6(St Patrick's Day 2019"
+    effects: []
+  zeus:
+    name: "&b&lZeus Mask"
+    lore:
+      - '&7Channel the powers of the'
+      - '&7King of Greek Gods'
+      - '&6* April Showers Lootbox Release'
+      - ''
+      - '&7&oAttach this mask to any helmet'
+      - '&7&oto give it a Visual Override!'
+      - ''
+      - '&7To equip, place this mask on a helmet.'
+      - '&7To remove, right-click helmet while attached.'
+    skin: "17472c868a19a8cc606611c36f39eb1ba6697771f1daf98c4a72655e1069549c"
+    applied_lore: "&b&lZeus Mask &6(April Showers Lootbox Release)"
+    effects: []

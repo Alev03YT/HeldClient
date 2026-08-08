@@ -1,0 +1,32 @@
+rewards:
+  0ff81b3f-6b8c-4f12-ba27-b14fee958e89:
+    material: "APPLE"
+    data: 0
+    name: "&cApples"
+    lore:
+      - "&7The lore for apples"
+    commands:
+      - "give <player> apple"
+      - "give <player> apple"
+    chance: 5
+    item: "NONE"
+  6ce524d1-6329-4e68-9a47-0f6bd9486127:
+    material: "CAKE"
+    data: 0
+    name: "&aCake"
+    lore:
+    - "&7The lore for cake"
+    commands:
+    - "give <player> cake"
+    chance: 10
+    item: "NONE"
+  ba3e0d7f-d475-4568-8391-2cdfe64b2eb6:
+    material: "PAPER"
+    data: 0
+    name: "&d5x Slot Bot Tickets"
+    lore:
+    - "&7The lore for slot bot tickets"
+    commands:
+    - "slotbot ticket <player> 5"
+    chance: 1
+    item: "NONE"

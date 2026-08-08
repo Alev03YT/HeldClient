@@ -1,0 +1,5 @@
+HealAndFeedPlayersInRadius:
+  Skills:
+    - heal{a=40} @PlayersInRadius{r=1}      # Cura 20 cuori
+    - feed{a=20} @PlayersInRadius{r=1}      # Ripristina 10 punti fame
+    - effect:particles{p=heart;amount=5;speed=0.1;y=1} @Self

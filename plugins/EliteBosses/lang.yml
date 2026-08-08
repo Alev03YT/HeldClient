@@ -1,0 +1,50 @@
+CONFIGURATION:
+  RELOADED: '&f&l(&6&lElite&e&lBosses&f&l) &eYou have successfully reloaded all configurations
+    and bosses!'
+ERROR:
+  PLAYER_SPAWN_DISABLED: '&f&l(&6&lElite&e&lBosses&f&l) &ePlayers are not allowed
+    to spawn this boss!'
+  WARZONE_ONLY: '&f&l(&6&lElite&e&lBosses&f&l) &eYou can only spawn this boss in the
+    warzone!'
+  BLOCKED_WORLD: '&f&l(&6&lElite&e&lBosses&f&l) &eYou are not allowed to spawn this
+    boss in this world!'
+  BLOCKED_REGION: '&f&l(&6&lElite&e&lBosses&f&l) &eYou are not allowed to spawn this
+    boss here!'
+  INVALID_BOSS: '&f&l(&6&lElite&e&lBosses&f&l) &eThat is not a valid boss!'
+  INVALID_AUTO_SPAWN: '&f&l(&6&lElite&e&lBosses&f&l) &eThat is not a valid auto spawn
+    id!'
+  INVALID_PLAYER: '&f&l(&6&lElite&e&lBosses&f&l) &eThat is not a valid player!'
+  INVALID_SPAWN: '&f&l(&6&lElite&e&lBosses&f&l) &eThis boss is not a valid one, it
+    was not removed properly on reboot!'
+  MISSING_ARGS: |-
+    &f&l(&6&lElite&e&lBosses&f&l) &eYou are missing some args to this command!
+    &8Args: &7{ARGS}
+  INVALID_WORLD: '&f&l(&6&lElite&e&lBosses&f&l) &eThat is not a valid world!'
+  OVER_SPAWN_LIMIT: '&f&l(&6&lElite&e&lBosses&f&l) &eYou cannot spawn this boss as
+    the world limit has been reached!'
+AUTO_SPAWN:
+  ADDED_LOCATION: '&f&l(&6&lElite&e&lBosses&f&l) &eSuccessfully added this location
+    to {NAME} Auto Spawn!'
+  TIME:
+    HEADER: '&e&l(!) &6Active Boss Autospawn'
+    MESSAGE: '&6&l{NAME}&7: &e{TIME}'
+    PLACEHOLDER: '{HOURS}h {MINS}m'
+BOSS:
+  TELEPORT_TO_SPAWN: '&f&l(&6&lElite&e&lBosses&f&l) &eThe &7{BOSS-NAME} &ehas been
+    teleported to its spawn location as it ventured too far!'
+  TELEPORTED_TO: '&f&l(&6&lElite&e&lBosses&f&l) &eYou have successfully been teleported
+    to {BOSS-NAME}!'
+  TERMINATED: '&f&l(&6&lElite&e&lBosses&f&l) &eYou have successfully been terminated
+    {BOSS-NAME}!'
+  KILL_ALL: '&f&l(&6&lElite&e&lBosses&f&l) &eYou have successfully killed all active
+    bosses!'
+TREASURE_BURST:
+  ERROR:
+    INVALID_ITEMSTACK: '&f&l(&6&lElite&e&lBosses&f&l) &eYou cannot add AIR into the
+      loot pool!'
+    INVALID_LOOT_ID: '&f&l(&6&lElite&e&lBosses&f&l) &eThat is not a valid loot id!'
+    ENTRY_ALREADY: '&f&l(&6&lElite&e&lBosses&f&l) &eThat is already an entry!'
+  ADDED_ITEMSTACK: '&f&l(&6&lElite&e&lBosses&f&l) &eYou have successfully added a
+    new entry!'
+  CREATED_ENTRY: '&f&l(&6&lElite&e&lBosses&f&l) &eYou have successfully created a
+    new entry!'

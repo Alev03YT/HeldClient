@@ -1,0 +1,31 @@
+enabled: false
+
+spawns:
+  random-spawn: # Name of the spawn - Used to set the locations
+    bosses: # Bosses it should spawn - 'CHANCE;BOSS'
+      - '40;undead-assassin'
+      - '30;brood-mother'
+    spawning:
+      location: "RANDOM" # Spawning type - RANDOM or DEFINED
+      # RANDOM - Select a random location from the locations list
+      # DEFINED - Select the first location from the locations list
+      # Locations can be added in-game using /eliteboss addlocation <name>
+      # ie. /eliteboss addlocation random-spawn
+      locations: []
+    settings:
+      time: "1000-1800" # Time before it spawns in seconds
+      # You can add two values with - to separate to get a random value between the two
+      # Or you can set one value and use just that value
+      max-spawn: 1 # Max amount of the boss from this spawn type that can be spawned
+      exclude: false # This will exclude it from the /eb time command
+  defined-spawn:
+    bosses:
+      - '40;undead-assassin'
+      - '30;brood-mother'
+    spawning:
+      location: "DEFINED"
+      locations: []
+    settings:
+      time: "1800"
+      max-spawn: 1
+      exclude: false

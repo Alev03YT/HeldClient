@@ -1,0 +1,43 @@
+enabled: false # Enabled this feature?
+# Requirement: http://www.mediafire.com/file/jhdgehxo8lmd2fs/JDAPlugin.jar/file
+# You need to have this plugin installed for this feature to work
+
+settings:
+  # Click on this link: https://discord.com/developers/applications
+  # Create a new application
+  # Click on the new application
+  # Click on the Bot button on the left hand side
+  # Generate the bot and click "Click to reveal token"
+  # Place the value here
+  #
+  # How to invite the discord bot to your server?
+  # https://discord.com/oauth2/authorize?client_id=CLIENT-ID&scope=bot
+  # Replace CLIENT-ID in the link with the client id on the bot/application main page
+  #
+  bot-token: ""
+  activity: "EliteBosses" # What the bot shows it is "watching", this is just a visual thing
+  # You can leave it empty if you want.
+
+announcements:
+  AUTO_SPAWN:
+    enabled: true # Announce when a boss auto spawns
+    channel: "" # ID of the discord channel you want the message to be sent
+    spawns: # Auto Spawn ID you want to announce this message for. Check auto-spawns.yml for the values
+      - 'random-spawn'
+    message:
+      title: "**Boss Sighting**" # Title ontop of embed message
+      lines: # Description of embed message
+        - 'Our sources say that there has been a boss spotted in the following coordinates'
+        - '**Location**: {X}, {Y}, {Z}, {WORLD}'
+      color: "12727593" # RGB Colour (Integer value)
+  SPAWN:
+    enabled: false
+    channel: ""
+    spawns:
+      - 'brood-mother'
+    message:
+      title: "**Boss Sighting**"
+      lines:
+        - 'Our sources say that there has been a boss spotted in the following coordinates'
+        - '**Location**: {X}, {Y}, {Z}, {WORLD}'
+      color: "12727593"

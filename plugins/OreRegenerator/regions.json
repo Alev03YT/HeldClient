@@ -1,0 +1,154 @@
+{
+   "regions": {
+      "world": {
+         "settings": {
+            "allow-block-break": true,
+            "auto-inventory": false,
+            "allow-block-place": true,
+            "region-display-icon": "GRASS_BLOCK",
+            "allow-block-tramping": true
+         },
+         "worldName": "world",
+         "id": "world",
+         "regennableBlocks": {
+            "34ac8a03-0fcc-4163-9f74-8ba12f6efca8": {
+               "replacePlaceable": {
+                  "data": {"material": "STONE"},
+                  "type": "material"
+               },
+               "originalPlaceable": {
+                  "data": {"material": "EMERALD_ORE"},
+                  "type": "material"
+               },
+               "minRegenTime": 5,
+               "type": "standard",
+               "maxRegenTime": 5,
+               "uuid": "34ac8a03-0fcc-4163-9f74-8ba12f6efca8"
+            },
+            "fddbc2f5-76ce-4680-8d55-6b41a3cbbd32": {
+               "replacePlaceable": {
+                  "data": {"material": "STONE"},
+                  "type": "material"
+               },
+               "originalPlaceable": {
+                  "data": {"material": "COAL_ORE"},
+                  "type": "material"
+               },
+               "minRegenTime": 5,
+               "type": "standard",
+               "maxRegenTime": 5,
+               "uuid": "fddbc2f5-76ce-4680-8d55-6b41a3cbbd32"
+            },
+            "c652dd0b-bacd-40d6-8e95-36d1f0353c1a": {
+               "replacePlaceable": {
+                  "data": {"material": "STONE"},
+                  "type": "material"
+               },
+               "originalPlaceable": {
+                  "data": {"material": "IRON_ORE"},
+                  "type": "material"
+               },
+               "minRegenTime": 5,
+               "type": "standard",
+               "maxRegenTime": 5,
+               "uuid": "c652dd0b-bacd-40d6-8e95-36d1f0353c1a"
+            },
+            "451e3594-f192-4682-a8c0-b4b743c5e782": {
+               "replacePlaceable": {
+                  "data": {"material": "STONE"},
+                  "type": "material"
+               },
+               "originalPlaceable": {
+                  "data": {"material": "GOLD_ORE"},
+                  "type": "material"
+               },
+               "minRegenTime": 5,
+               "type": "standard",
+               "maxRegenTime": 5,
+               "uuid": "451e3594-f192-4682-a8c0-b4b743c5e782"
+            },
+            "08d61894-4d06-49b0-ac95-d986ab3505da": {
+               "replacePlaceable": {
+                  "data": {"material": "STONE"},
+                  "type": "material"
+               },
+               "originalPlaceable": {
+                  "data": {"material": "GILDED_BLACKSTONE"},
+                  "type": "material"
+               },
+               "minRegenTime": 5,
+               "type": "standard",
+               "maxRegenTime": 5,
+               "uuid": "08d61894-4d06-49b0-ac95-d986ab3505da"
+            },
+            "265209de-6729-40a2-bcf8-f58aa306dd84": {
+               "replacePlaceable": {
+                  "data": {"material": "STONE"},
+                  "type": "material"
+               },
+               "originalPlaceable": {
+                  "data": {"material": "LAPIS_ORE"},
+                  "type": "material"
+               },
+               "minRegenTime": 5,
+               "type": "standard",
+               "maxRegenTime": 5,
+               "uuid": "265209de-6729-40a2-bcf8-f58aa306dd84"
+            },
+            "b99668ae-7da3-43a6-b76b-cc40e1cbfe03": {
+               "replacePlaceable": {
+                  "data": {"material": "STONE"},
+                  "type": "material"
+               },
+               "originalPlaceable": {
+                  "data": {"material": "REDSTONE_ORE"},
+                  "type": "material"
+               },
+               "minRegenTime": 5,
+               "type": "standard",
+               "maxRegenTime": 5,
+               "uuid": "b99668ae-7da3-43a6-b76b-cc40e1cbfe03"
+            },
+            "cab7f43b-d4a4-4916-99df-79378b118e8b": {
+               "replacePlaceable": {
+                  "data": {"material": "STONE"},
+                  "type": "material"
+               },
+               "originalPlaceable": {
+                  "data": {"material": "DIAMOND_ORE"},
+                  "type": "material"
+               },
+               "minRegenTime": 5,
+               "type": "standard",
+               "maxRegenTime": 5,
+               "uuid": "cab7f43b-d4a4-4916-99df-79378b118e8b"
+            }
+         }
+      },
+      "world_the_end": {
+         "settings": {
+            "allow-block-break": true,
+            "auto-inventory": false,
+            "allow-block-place": true,
+            "region-display-icon": "GRASS_BLOCK",
+            "allow-block-tramping": true
+         },
+         "worldName": "world_the_end",
+         "id": "world_the_end",
+         "regennableBlocks": {}
+      },
+      "world_nether": {
+         "settings": {
+            "allow-block-break": true,
+            "auto-inventory": false,
+            "allow-block-place": true,
+            "region-display-icon": "GRASS_BLOCK",
+            "allow-block-tramping": true
+         },
+         "worldName": "world_nether",
+         "id": "world_nether",
+         "regennableBlocks": {}
+      }
+   },
+   "version": 2
+}
